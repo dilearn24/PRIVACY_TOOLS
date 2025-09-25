@@ -1,0 +1,10 @@
+{
+  "rules": [
+    { "type": "endpoints", "endpoints": ["/v1/users", "/v1/profile", "/docs"] },
+    { "type": "form_paths", "form_paths": ["/onboarding"] },
+
+    { "id": "pii_internal_id", "type": "pii", "title": "Internal ID",
+      "pattern": "\\buser_[0-9a-f]{8}\\b", "severity": "low",
+      "recommendation": "Do not expose internal identifiers in responses." }
+  ]
+}

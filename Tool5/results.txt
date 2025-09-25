@@ -1,0 +1,30 @@
+7 Privacy instances detected:
+
+01. Rule [ERROR INTERNAL SERVER] (@line 2): Internal Server Error in application
+    Value: 'Internal Server Error: /login'
+    Recommendation: Catch and handle errors gracefully; log only a high-level error message without stack details.
+
+02. Rule [ERROR TRACEBACK] (@line 3): Python stack trace present
+    Value: 'Traceback (most recent call last):'
+    Recommendation: In production, catch exceptions and log only summary; send full trace to a secure error-tracker.
+
+03. Rule [ERROR RUNTIME] (@line 12): RuntimeError in logs
+    Value: 'RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.'
+    Recommendation: Handle runtime errors in code and log only sanitized messages without sensitive context.
+
+04. Rule [ERROR INTERNAL SERVER] (@line 14): Internal Server Error in application
+    Value: 'Internal Server Error: /login'
+    Recommendation: Catch and handle errors gracefully; log only a high-level error message without stack details.
+
+05. Rule [ERROR TRACEBACK] (@line 15): Python stack trace present
+    Value: 'Traceback (most recent call last):'
+    Recommendation: In production, catch exceptions and log only summary; send full trace to a secure error-tracker.
+
+06. Rule [ERROR RUNTIME] (@line 24): RuntimeError in logs
+    Value: 'RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.'
+    Recommendation: Handle runtime errors in code and log only sanitized messages without sensitive context.
+
+07. Rule [PRIVACY COOKIE] (@line 90): Cookie operation in logs
+    Value: 'Setting cookie successful'
+    Recommendation: Do not log full cookie values; log only the cookie name or an anonymized marker.
+

@@ -1,0 +1,110 @@
+[
+  {
+    "id": "PII_IN_TRANSIT",
+    "target": "flow",
+    "condition": {
+      "data_type": "personal_data",
+      "encrypted": "true"
+    }
+  },
+  {
+    "id": "HIGH_SENSITIVE_RETENTION",
+    "target": "store",
+    "condition": {
+      "sensitivity": "high",
+      "retention_policy": "exists"
+    }
+  },
+  {
+    "id": "STORAGE_LIMITATION",
+    "target": "store",
+    "condition": {
+      "data_type": "personal_data",
+      "retention_policy": "exists"
+    }
+  },
+  {
+    "id": "DATA_MINIMIZATION",
+    "target": "flow",
+    "condition": {
+      "data_type": "personal_data",
+      "purpose": "exists"
+    }
+  },
+  {
+    "id": "PURPOSE_SPECIFIED",
+    "target": "flow",
+    "condition": {
+      "purpose": "exists"
+    }
+  },
+  {
+    "id": "ENCRYPTION_AT_REST",
+    "target": "store",
+    "condition": {
+      "encrypted": "true"
+    }
+  },
+  {
+    "id": "RBAC_ENFORCED",
+    "target": "flow",
+    "condition": {
+      "rbac": "true"
+    }
+  },
+  {
+    "id": "LOG_INTEGRITY",
+    "target": "store",
+    "condition": {
+      "isALog": "true",
+      "signed": "true"
+    }
+  },
+  {
+    "id": "TIMESTAMPED_EVENT",
+    "target": "flow",
+    "condition": {
+      "timestamp": "exists"
+    }
+  },
+  {
+    "id": "CONSENT_FLOW_SECURE",
+    "target": "flow",
+    "condition": {
+      "data_type": "consent_record",
+      "encrypted": "true"
+    }
+  },
+  {
+    "id": "TIMESTAMP_ON_CONSENT",
+    "target": "flow",
+    "condition": {
+      "data_type": "consent_record",
+      "timestamp": "exists"
+    }
+  },
+  {
+    "id": "RBAC_ON_GRADE_FLOW",
+    "target": "flow",
+    "condition": {
+      "data_type": "academic_data",
+      "rbac": "true"
+    }
+  },
+  {
+    "id": "AUDIT_LOG_SIGNED",
+    "target": "store",
+    "condition": {
+      "isALog": "true",
+      "signed": "true"
+    }
+  },
+  {
+    "id": "AUDIT_LOG_RETENTION",
+    "target": "store",
+    "condition": {
+      "isALog": "true",
+      "retention_policy": "exists"
+    }
+  }
+]

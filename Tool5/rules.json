@@ -1,0 +1,114 @@
+[
+  {
+    "id": "PII EMAIL",
+    "description": "Email addresses leaked in logs",
+    "field": "log",
+    "pattern": "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}",
+    "recommendation": "Mask or hash user emails before logging; e.g. replace the local-part with asterisks."
+  },
+  {
+    "id": "PII SSN",
+    "description": "US Social Security Numbers in logs",
+    "field": "log",
+    "pattern": "\\b\\d{3}-\\d{2}-\\d{4}\\b",
+    "recommendation": "Remove SSNs from logs entirely or redact all but the last four digits."
+  },
+  {
+    "id": "PII PHONE",
+    "description": "Phone numbers in logs",
+    "field": "log",
+    "pattern": "(?:\\+?1[-.\\s]?)?(?:\\(\\d{3}\\)[-.\\s]?|\\d{3}[-.\\s])\\d{3}[-.\\s]\\d{4}",
+    "recommendation": "Redact phone numbers or replace them with placeholder tokens before writing to log."
+  },
+  {
+    "id": "PII CREDIT CARD",
+    "description": "Credit card numbers in logs",
+    "field": "log",
+    "pattern": "\\b(?:\\d[ -]*?){13,16}\\b",
+    "recommendation": "Never log full credit-card numbers; mask all but the last 4 digits or omit entirely."
+  },
+  {
+    "id": "EXPOSED TOKEN",
+    "description": "Bearer or OAuth tokens appearing in logs",
+    "field": "log",
+    "pattern": "(?i)Bearer\\s+[A-Za-z0-9\\-_.]+",
+    "recommendation": "Avoid logging tokens; if absolutely needed, truncate or hash them first."
+  },
+  {
+    "id": "JWT TOKEN",
+    "description": "JSON Web Tokens in logs",
+    "field": "log",
+    "pattern": "[A-Za-z0-9\\-_=]+\\.[A-Za-z0-9\\-_=]+\\.[A-Za-z0-9\\-_.+\\/=]*",
+    "recommendation": "Do not log full JWTs; log only token identifiers or a hashed summary."
+  },
+  {
+    "id": "PASSWORD HASH",
+    "description": "Password hash leaks (MD5, SHA, bcrypt, Argon2)",
+    "field": "log",
+    "pattern": "(?i)(?:sha1|sha256|md5|bcrypt|argon2)\\$[A-Za-z0-9\\/$\\.]+",
+    "recommendation": "Never log password hashes; if required, log only a reference ID without the hash."
+  },
+  {
+    "id": "IP ADDRESS",
+    "description": "IPv4 addresses in logs",
+    "field": "log",
+    "pattern": "\\b(?:[0-9]{1,3}\\.){3}[0-9]{1,3}\\b",
+    "recommendation": "Anonymize IPs (e.g., truncate the last octet) or mask before logging to protect user privacy."
+  },
+  {
+    "id": "UUID",
+    "description": "UUIDs in logs",
+    "field": "log",
+    "pattern": "\\b[0-9a-fA-F]{8}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{4}\\-[0-9a-fA-F]{12}\\b",
+    "recommendation": "Avoid logging user-identifying UUIDs directly; map to pseudonymous IDs if needed."
+  },
+  {
+    "id": "PRIVACY COOKIE",
+    "description": "Cookie operation in logs",
+    "field": "log",
+    "pattern": "(?i)cookie",
+    "recommendation": "Do not log full cookie values; log only the cookie name or an anonymized marker."
+  },
+  {
+    "id": "ERROR INTERNAL SERVER",
+    "description": "Internal Server Error in application",
+    "field": "log",
+    "pattern": "Internal Server Error",
+    "recommendation": "Catch and handle errors gracefully; log only a high-level error message without stack details."
+  },
+  {
+    "id": "ERROR TRACEBACK",
+    "description": "Python stack trace present",
+    "field": "log",
+    "pattern": "Traceback \\(most recent call last\\)",
+    "recommendation": "In production, catch exceptions and log only summary; send full trace to a secure error-tracker."
+  },
+  {
+    "id": "ERROR RUNTIME",
+    "description": "RuntimeError in logs",
+    "field": "log",
+    "pattern": "RuntimeError:",
+    "recommendation": "Handle runtime errors in code and log only sanitized messages without sensitive context."
+  },
+  {
+    "id": "ENDPOINT LOGIN",
+    "description": "User login endpoint accessed",
+    "field": "log",
+    "pattern": "\"(?:GET|POST)\\s+/(?:auth_lab/)?login\\b",
+    "recommendation": "Log only user ID and timestamp on login; avoid logging raw credentials or headers."
+  },
+  {
+    "id": "ENDPOINT SIGNUP",
+    "description": "User signup endpoint accessed",
+    "field": "log",
+    "pattern": "\"POST\\s+/(?:auth_lab/)?signup\\b",
+    "recommendation": "Log only essential signup metadata (user ID/email, status); do not log passwords."
+  },
+  {
+    "id": "ENDPOINT DATA EXPORT",
+    "description": "Data export endpoint accessed",
+    "field": "log",
+    "pattern": "\"GET\\s+/data_exp\\b",
+    "recommendation": "Record only the fact of export (user ID, time, success/failure); never log the payload."
+  }
+]

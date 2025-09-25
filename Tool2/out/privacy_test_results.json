@@ -1,0 +1,270 @@
+{
+  "total": 15,
+  "passed": 9,
+  "failed": 5,
+  "manual": 1,
+  "details": [
+    {
+      "test": "test_no_pii_leakage",
+      "description": "No PII/PHI leakage in response bodies – 0 items",
+      "result": "PASS",
+      "findings": {
+        "items": [],
+        "total_items": 0,
+        "skipped_non200": [
+          {
+            "endpoint": "/",
+            "status": 0,
+            "len": 0
+          },
+          {
+            "endpoint": "/api",
+            "status": 0,
+            "len": 0
+          },
+          {
+            "endpoint": "/login",
+            "status": 0,
+            "len": 0
+          },
+          {
+            "endpoint": "/signup",
+            "status": 0,
+            "len": 0
+          },
+          {
+            "endpoint": "/register",
+            "status": 0,
+            "len": 0
+          },
+          {
+            "endpoint": "/profile",
+            "status": 0,
+            "len": 0
+          },
+          {
+            "endpoint": "/account",
+            "status": 0,
+            "len": 0
+          },
+          {
+            "endpoint": "/users",
+            "status": 0,
+            "len": 0
+          },
+          {
+            "endpoint": "/privacy",
+            "status": 0,
+            "len": 0
+          }
+        ]
+      }
+    },
+    {
+      "test": "test_privacy_headers_present",
+      "description": "Privacy/security headers present",
+      "result": "FAIL",
+      "findings": {
+        "missing": [
+          {
+            "rule_id": "hdr_referrer_policy",
+            "header": "Referrer-Policy",
+            "severity": "low",
+            "recommendation": "Set Referrer-Policy: no-referrer or strict-origin-when-cross-origin."
+          },
+          {
+            "rule_id": "hdr_permissions_policy",
+            "header": "Permissions-Policy",
+            "severity": "low",
+            "recommendation": "Define Permissions-Policy to restrict powerful browser APIs."
+          },
+          {
+            "rule_id": "hdr_x_content_type_options",
+            "header": "X-Content-Type-Options",
+            "severity": "low",
+            "recommendation": "Set X-Content-Type-Options: nosniff."
+          },
+          {
+            "rule_id": "hdr_content_security_policy",
+            "header": "Content-Security-Policy",
+            "severity": "medium",
+            "recommendation": "Add a CSP to reduce data exfiltration and XSS risk."
+          }
+        ],
+        "missing_count": 4,
+        "status": 0
+      }
+    },
+    {
+      "test": "test_no_tracking_cookies_before_consent",
+      "description": "No cookies before consent",
+      "result": "PASS",
+      "findings": {
+        "cookies_count": 0,
+        "cookies": [],
+        "raw_set_cookie_present": false,
+        "status": 0,
+        "recommendation": "Require explicit consent before setting non-essential cookies."
+      }
+    },
+    {
+      "test": "test_form_does_not_request_excessive_data",
+      "description": "Signup forms avoid over-collection",
+      "result": "PASS",
+      "findings": {
+        "bad_fields": [],
+        "bad_fields_count": 0
+      }
+    },
+    {
+      "test": "test_right_to_erasure_stub",
+      "description": "Right-to-erasure / retention workflow (manual)",
+      "result": "MANUAL",
+      "findings": {
+        "manual_check_required": true,
+        "recommendation": "Verify delete/export request workflow"
+      }
+    },
+    {
+      "test": "test_privacy_settings_accessible",
+      "description": "Privacy settings/info accessible",
+      "result": "FAIL",
+      "findings": {
+        "accessible_paths": [],
+        "checked": [
+          {
+            "path": "/privacy",
+            "status": 0
+          },
+          {
+            "path": "/privacy-policy",
+            "status": 0
+          },
+          {
+            "path": "/legal/privacy",
+            "status": 0
+          }
+        ],
+        "count": 0
+      }
+    },
+    {
+      "test": "test_https_required",
+      "description": "HTTPS enforced for tested base URL (disabled by rules)",
+      "result": "PASS",
+      "findings": {
+        "url": "http://host.docker.internal:8000"
+      }
+    },
+    {
+      "test": "test_opt_out_mechanism_exists",
+      "description": "Opt-out/unsubscribe mechanism visible",
+      "result": "FAIL",
+      "findings": {
+        "keywords_found": [],
+        "count": 0
+      }
+    },
+    {
+      "test": "test_no_stack_trace_or_debug_output",
+      "description": "No debug/stack trace in error responses",
+      "result": "PASS",
+      "findings": {
+        "leaks": [],
+        "count": 0
+      }
+    },
+    {
+      "test": "test_breach_notification_policy_linked",
+      "description": "Breach notification policy visible",
+      "result": "FAIL",
+      "findings": {
+        "mentions": [],
+        "mentions_total": 0
+      }
+    },
+    {
+      "test": "test_cookie_attribute_hygiene",
+      "description": "Cookie attribute hygiene (Secure/HttpOnly/SameSite)",
+      "result": "PASS",
+      "findings": {
+        "checked": 0,
+        "non_compliant": 0,
+        "details": []
+      }
+    },
+    {
+      "test": "test_no_store_on_sensitive_paths",
+      "description": "No-store on sensitive pages",
+      "result": "FAIL",
+      "findings": {
+        "checked": 4,
+        "non_compliant": 4,
+        "details": [
+          {
+            "path": "/account",
+            "status": 0,
+            "severity": "medium",
+            "recommendation": "Set Cache-Control: no-store (and Pragma: no-cache) on sensitive pages.",
+            "cache_control": "",
+            "pragma": ""
+          },
+          {
+            "path": "/profile",
+            "status": 0,
+            "severity": "medium",
+            "recommendation": "Set Cache-Control: no-store (and Pragma: no-cache) on sensitive pages.",
+            "cache_control": "",
+            "pragma": ""
+          },
+          {
+            "path": "/users",
+            "status": 0,
+            "severity": "medium",
+            "recommendation": "Set Cache-Control: no-store (and Pragma: no-cache) on sensitive pages.",
+            "cache_control": "",
+            "pragma": ""
+          },
+          {
+            "path": "/settings",
+            "status": 0,
+            "severity": "medium",
+            "recommendation": "Set Cache-Control: no-store (and Pragma: no-cache) on sensitive pages.",
+            "cache_control": "",
+            "pragma": ""
+          }
+        ]
+      }
+    },
+    {
+      "test": "test_cors_policy_sanity",
+      "description": "CORS policy sanity",
+      "result": "PASS",
+      "findings": {
+        "issues": [],
+        "acao": "",
+        "allow_credentials": ""
+      }
+    },
+    {
+      "test": "test_csrf_token_hint",
+      "description": "CSRF token hint on forms",
+      "result": "PASS",
+      "findings": {
+        "checked": 0,
+        "missing": 0,
+        "details": []
+      }
+    },
+    {
+      "test": "test_server_fingerprint_minimized",
+      "description": "Server fingerprint minimized",
+      "result": "PASS",
+      "findings": {
+        "present_count": 0,
+        "details": []
+      }
+    }
+  ],
+  "pass_rate": "60.0%"
+}

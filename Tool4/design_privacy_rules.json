@@ -1,0 +1,73 @@
+[
+  {
+    "id": "REQUIRE ENCRYPT STORE",
+    "target": "store",
+    "description": "All DataStores must have isEncrypted=true",
+    "condition": {
+      "isEncrypted": "true"
+    }
+  },
+  {
+    "id": "REQUIRE PERSONAL DATA RETENTION",
+    "target": "store",
+    "description": "Stores of personal_data must specify a non-empty retention period",
+    "condition": {
+      "dataType": "personal_data",
+      "retention": ".+"
+    }
+  },
+  {
+    "id": "REQUIRE RETENTION CONSENT",
+    "target": "store",
+    "description": "Consent Store must specify a non-empty retention period",
+    "condition": {
+      "dataType": "consent_record",
+      "retention": ".+"
+    }
+  },
+  {
+    "id": "RETENTION GREATER THAN 90 DAYS",
+    "target": "store",
+    "severity": "warning",
+    "description": "Stores of student_record must not retain data longer than 90 days",
+    "condition": {
+      "dataType": "student_record",
+      "retention": "(^[0-9]{1,2}d$)"
+    }
+  },
+  {
+    "id": "REQUIRE SECURE FLOW",
+    "target": "flow",
+    "description": "InformationFlows with personal_data must have isEncrypted=true",
+    "condition": {
+      "dataType": "personal_data",
+      "isEncrypted": "true"
+    }
+  },
+  {
+    "id": "REQUIRE HTTPS CONSENT FLOW",
+    "target": "flow",
+    "description": "Flows carrying consent_record must set protocol to HTTPS",
+    "condition": {
+      "dataType": "consent_record",
+      "protocol": "HTTPS"
+    }
+  },
+  {
+    "id": "REQUIRE PROTOCOL FOR AUDIT",
+    "target": "flow",
+    "description": "Audit Event flows must declare their transport protocol",
+    "condition": {
+      "dataType": "audit_event",
+      "protocol": ".+"
+    }
+  },
+  {
+    "id": "REQUIRE FLOW PURPOSE",
+    "target": "flow",
+    "description": "Every InformationFlow must declare a non-empty business purpose",
+    "condition": {
+      "Purpose": ".+"
+    }
+  }
+]

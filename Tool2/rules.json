@@ -1,0 +1,48 @@
+{
+  "rules": [
+    { "type": "endpoints", "endpoints": ["/", "/api", "/login", "/signup", "/register", "/profile", "/account", "/users", "/privacy"] },
+    { "type": "form_paths", "form_paths": ["/signup", "/register", "/account", "/profile"] },
+
+    { "id": "pii_email", "type": "pii", "title": "Email", "pattern": "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}", "severity": "medium", "recommendation": "Do not echo user email in responses; redact or remove." },
+    { "id": "pii_phone_e164", "type": "pii", "title": "Phone (E.164)", "pattern": "\\+\\d{10,15}", "severity": "medium", "recommendation": "Avoid returning phone numbers; mask as +*********1234." },
+    { "id": "pii_ipv4", "type": "pii", "title": "IP address (IPv4)", "pattern": "\\b(?:\\d{1,3}\\.){3}\\d{1,3}\\b", "severity": "low", "recommendation": "Do not expose client or internal IPs in responses." },
+    { "id": "pii_us_ssn", "type": "pii", "title": "US SSN", "pattern": "\\b(?!000|666)(?:[0-8]\\d{2})[- ]?(?!00)\\d{2}[- ]?(?!0000)\\d{4}\\b", "severity": "high", "recommendation": "Never expose SSNs; store and transmit only when strictly required and always redact in responses." },
+
+    { "id": "hdr_referrer_policy", "type": "header", "header": "Referrer-Policy", "severity": "low", "recommendation": "Set Referrer-Policy: no-referrer or strict-origin-when-cross-origin." },
+    { "id": "hdr_permissions_policy", "type": "header", "header": "Permissions-Policy", "severity": "low", "recommendation": "Define Permissions-Policy to restrict powerful browser APIs." },
+    { "id": "hdr_x_content_type_options", "type": "header", "header": "X-Content-Type-Options", "severity": "low", "recommendation": "Set X-Content-Type-Options: nosniff." },
+    { "id": "hdr_content_security_policy", "type": "header", "header": "Content-Security-Policy", "severity": "medium", "recommendation": "Add a CSP to reduce data exfiltration and XSS risk." },
+
+    { "id": "form_forbid_ssn", "type": "form_forbid", "term": "ssn", "severity": "high", "recommendation": "Avoid SSN collection unless legally required and justified." },
+    { "id": "form_forbid_passport", "type": "form_forbid", "term": "passport", "severity": "high", "recommendation": "Avoid passport collection at signup; gate behind strong justification." },
+    { "id": "form_forbid_dob", "type": "form_forbid", "term": "date of birth", "severity": "medium", "recommendation": "Only collect DOB when strictly necessary." },
+
+    { "id": "optout_unsubscribe", "type": "opt_out_keyword", "keyword": "unsubscribe", "severity": "low", "recommendation": "Provide a clear unsubscribe/opt-out option." },
+    { "id": "optout_do_not_sell", "type": "opt_out_keyword", "keyword": "do not sell", "severity": "medium", "recommendation": "Offer a CCPA 'Do Not Sell or Share My Personal Information' link." },
+    { "id": "optout_opt_out", "type": "opt_out_keyword", "keyword": "opt out", "severity": "low", "recommendation": "Provide an accessible opt-out mechanism for marketing and data sharing." },
+
+    { "id": "debug_stack_trace", "type": "debug_term", "term": "stack trace", "severity": "medium", "recommendation": "Disable detailed errors in production." },
+    { "id": "debug_traceback", "type": "debug_term", "term": "traceback (most recent call last)", "severity": "medium", "recommendation": "Suppress Python tracebacks from user-facing error pages." },
+    { "id": "debug_exception_in_thread", "type": "debug_term", "term": "exception in thread", "severity": "medium", "recommendation": "Avoid exposing exception details." },
+
+    { "id": "breach_keyword", "type": "breach_keyword", "keyword": "breach", "severity": "low", "recommendation": "Document incident/breach notification in the privacy policy." },
+    { "id": "incident_keyword", "type": "breach_keyword", "keyword": "incident", "severity": "low", "recommendation": "Reference incident response and user notification procedures." },
+
+    { "type": "privacy_path", "path": "/privacy" },
+    { "type": "privacy_path", "path": "/privacy-policy" },
+    { "type": "privacy_path", "path": "/legal/privacy" },
+
+    { "type": "require_https", "enabled": false },
+
+    { "id": "cookie_before_consent", "type": "cookie_before_consent", "recommendation": "Require explicit consent before setting non-essential cookies." },
+
+    { "id": "cookie_flags_session", "type": "cookie_flag", "name_pattern": "session|sid|auth", "require_secure": true, "require_httponly": true, "require_samesite": "Lax", "severity": "high", "recommendation": "Mark session cookies Secure, HttpOnly, and SameSite=Lax/Strict." },
+
+    { "id": "no_store_sensitive", "type": "no_store_paths", "paths": ["/account", "/profile", "/users", "/settings"], "severity": "medium", "recommendation": "Set Cache-Control: no-store (and Pragma: no-cache) on sensitive pages." },
+
+    { "id": "csrf_token_hint", "type": "csrf_hint", "form_paths": ["/signup", "/register", "/account", "/profile"], "severity": "medium", "recommendation": "Include an anti-CSRF token as a hidden field." },
+
+    { "id": "server_fingerprint", "type": "header_forbid", "headers": ["Server", "X-Powered-By", "X-AspNet-Version"], "severity": "low", "recommendation": "Remove software/version-identifying headers." }
+  ]
+}
+

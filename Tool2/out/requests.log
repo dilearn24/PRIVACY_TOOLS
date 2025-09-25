@@ -1,0 +1,34 @@
+[2025-09-25 17:50:48 UTC] logging -> requests.log
+[2025-09-25 17:50:51 UTC] GET http://host.docker.internal:8000/ | URLError <urlopen error [Errno 113] No route to host>
+[2025-09-25 17:50:54 UTC] GET http://host.docker.internal:8000/api | URLError <urlopen error [Errno 113] No route to host>
+[2025-09-25 17:50:57 UTC] GET http://host.docker.internal:8000/login | URLError <urlopen error [Errno 113] No route to host>
+[2025-09-25 17:51:00 UTC] GET http://host.docker.internal:8000/signup | URLError <urlopen error [Errno 113] No route to host>
+[2025-09-25 17:51:03 UTC] GET http://host.docker.internal:8000/register | URLError <urlopen error [Errno 113] No route to host>
+[2025-09-25 17:51:06 UTC] GET http://host.docker.internal:8000/profile | URLError <urlopen error [Errno 113] No route to host>
+[2025-09-25 17:51:09 UTC] GET http://host.docker.internal:8000/account | URLError <urlopen error [Errno 113] No route to host>
+[2025-09-25 17:51:13 UTC] GET http://host.docker.internal:8000/users | URLError <urlopen error [Errno 113] No route to host>
+[2025-09-25 17:51:16 UTC] GET http://host.docker.internal:8000/privacy | URLError <urlopen error [Errno 113] No route to host>
+[2025-09-25 17:51:19 UTC] GET http://host.docker.internal:8000/ | URLError <urlopen error [Errno 113] No route to host>
+[2025-09-25 17:51:22 UTC] GET http://host.docker.internal:8000/ | URLError <urlopen error [Errno 113] No route to host>
+[2025-09-25 17:51:25 UTC] GET http://host.docker.internal:8000/signup | URLError <urlopen error [Errno 113] No route to host>
+[2025-09-25 17:51:28 UTC] GET http://host.docker.internal:8000/register | URLError <urlopen error [Errno 113] No route to host>
+[2025-09-25 17:51:31 UTC] GET http://host.docker.internal:8000/account | URLError <urlopen error [Errno 113] No route to host>
+[2025-09-25 17:51:34 UTC] GET http://host.docker.internal:8000/profile | URLError <urlopen error [Errno 113] No route to host>
+[2025-09-25 17:51:37 UTC] GET http://host.docker.internal:8000/privacy | URLError <urlopen error [Errno 113] No route to host>
+[2025-09-25 17:51:40 UTC] GET http://host.docker.internal:8000/privacy-policy | URLError <urlopen error [Errno 113] No route to host>
+[2025-09-25 17:51:43 UTC] GET http://host.docker.internal:8000/legal/privacy | URLError <urlopen error [Errno 113] No route to host>
+[2025-09-25 17:51:46 UTC] GET http://host.docker.internal:8000/ | URLError <urlopen error [Errno 113] No route to host>
+[2025-09-25 17:51:49 UTC] GET http://host.docker.internal:8000/nonexistent-route | URLError <urlopen error [Errno 113] No route to host>
+[2025-09-25 17:51:52 UTC] GET http://host.docker.internal:8000/privacy | URLError <urlopen error [Errno 113] No route to host>
+[2025-09-25 17:51:56 UTC] GET http://host.docker.internal:8000/ | URLError <urlopen error [Errno 113] No route to host>
+[2025-09-25 17:51:59 UTC] GET http://host.docker.internal:8000/account | URLError <urlopen error [Errno 113] No route to host>
+[2025-09-25 17:52:02 UTC] GET http://host.docker.internal:8000/profile | URLError <urlopen error [Errno 113] No route to host>
+[2025-09-25 17:52:05 UTC] GET http://host.docker.internal:8000/users | URLError <urlopen error [Errno 113] No route to host>
+[2025-09-25 17:52:08 UTC] GET http://host.docker.internal:8000/settings | URLError <urlopen error [Errno 113] No route to host>
+[2025-09-25 17:52:11 UTC] GET http://host.docker.internal:8000/ | URLError <urlopen error [Errno 113] No route to host>
+[2025-09-25 17:52:14 UTC] GET http://host.docker.internal:8000/signup | URLError <urlopen error [Errno 113] No route to host>
+[2025-09-25 17:52:17 UTC] GET http://host.docker.internal:8000/register | URLError <urlopen error [Errno 113] No route to host>
+[2025-09-25 17:52:20 UTC] GET http://host.docker.internal:8000/account | URLError <urlopen error [Errno 113] No route to host>
+[2025-09-25 17:52:23 UTC] GET http://host.docker.internal:8000/profile | URLError <urlopen error [Errno 113] No route to host>
+[2025-09-25 17:52:26 UTC] GET http://host.docker.internal:8000/ | URLError <urlopen error [Errno 113] No route to host>
+[2025-09-25 17:52:26 UTC] wrote JSON/TXT to: out

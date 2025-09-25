@@ -1,0 +1,41 @@
+Privacy Testing Validator – Results
+Total: 15  Passed: 9  Failed: 5  Manual: 1  Pass rate: 60.0%
+--------------------------------------------------------------------------------
+[PASS] test_no_pii_leakage – No PII/PHI leakage in response bodies – 0 items
+  items: 0
+  skipped_non200: 9
+
+[FAIL] test_privacy_headers_present – Privacy/security headers present
+  missing: 4
+
+[PASS] test_no_tracking_cookies_before_consent – No cookies before consent
+  cookies: 0
+
+[PASS] test_form_does_not_request_excessive_data – Signup forms avoid over-collection
+  bad_fields: 0
+
+[MANUAL] test_right_to_erasure_stub – Right-to-erasure / retention workflow (manual)
+
+[FAIL] test_privacy_settings_accessible – Privacy settings/info accessible
+
+[PASS] test_https_required – HTTPS enforced for tested base URL (disabled by rules)
+
+[FAIL] test_opt_out_mechanism_exists – Opt-out/unsubscribe mechanism visible
+
+[PASS] test_no_stack_trace_or_debug_output – No debug/stack trace in error responses
+
+[FAIL] test_breach_notification_policy_linked – Breach notification policy visible
+  mentions: 0
+
+[PASS] test_cookie_attribute_hygiene – Cookie attribute hygiene (Secure/HttpOnly/SameSite)
+  checked: 0  non_compliant: 0
+
+[FAIL] test_no_store_on_sensitive_paths – No-store on sensitive pages
+  checked: 4  non_compliant: 4
+
+[PASS] test_cors_policy_sanity – CORS policy sanity
+
+[PASS] test_csrf_token_hint – CSRF token hint on forms
+
+[PASS] test_server_fingerprint_minimized – Server fingerprint minimized
+  present: 0

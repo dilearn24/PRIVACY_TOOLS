@@ -1,0 +1,5 @@
+FROM python:3.11-slim
+WORKDIR /app
+COPY privacy_testing_validator.py rules.json ./
+CMD ["python", "privacy_testing_validator.py", "--rules", "rules.json", "--outdir", "out"]
+

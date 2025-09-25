@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:LocalProfile="http:///schemas/LocalProfile/_syk4sFxpEfCGJZ-C3lgMBA/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/LocalProfile/_syk4sFxpEfCGJZ-C3lgMBA/0 LocalProfile.profile.xmi#_syk4uFxpEfCGJZ-C3lgMBA">
+  <uml:Model xmi:id="_syR9wFxpEfCGJZ-C3lgMBA" name="edtrack">
+    <eAnnotations xmi:id="_syR9wVxpEfCGJZ-C3lgMBA" source="Objing">
+      <contents xmi:type="uml:Property" xmi:id="_syR9wlxpEfCGJZ-C3lgMBA" name="exporterVersion">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_syR9w1xpEfCGJZ-C3lgMBA" value="3.0.0"/>
+      </contents>
+    </eAnnotations>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_syR9xFxpEfCGJZ-C3lgMBA" name="Students"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_syR9xVxpEfCGJZ-C3lgMBA" name="Instructors"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_syR9xlxpEfCGJZ-C3lgMBA" name="Authentication Services"/>
+    <packagedElement xmi:type="uml:Component" xmi:id="_syR9x1xpEfCGJZ-C3lgMBA" name="Authentication"/>
+    <packagedElement xmi:type="uml:Component" xmi:id="_syR9yFxpEfCGJZ-C3lgMBA" name="Consent"/>
+    <packagedElement xmi:type="uml:Component" xmi:id="_syR9yVxpEfCGJZ-C3lgMBA" name="Record"/>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_syR9ylxpEfCGJZ-C3lgMBA" name="Audit Event" informationSource="_syR9yVxpEfCGJZ-C3lgMBA" informationTarget="_syR9zFxpEfCGJZ-C3lgMBA"/>
+    <packagedElement xmi:type="uml:Component" xmi:id="_syR9y1xpEfCGJZ-C3lgMBA" name="Grade"/>
+    <packagedElement xmi:type="uml:Component" xmi:id="_syR9zFxpEfCGJZ-C3lgMBA" name="Audit"/>
+    <packagedElement xmi:type="uml:Node" xmi:id="_syR9zVxpEfCGJZ-C3lgMBA" name="User DB">
+      <ownedComment xmi:id="_syR9zlxpEfCGJZ-C3lgMBA">
+        <body>&lt;Enter note text here></body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Node" xmi:id="_syR9z1xpEfCGJZ-C3lgMBA" name="Student Records Store">
+      <ownedComment xmi:id="_syR90FxpEfCGJZ-C3lgMBA">
+        <body>&lt;Enter note text here></body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Node" xmi:id="_syR90VxpEfCGJZ-C3lgMBA" name="Grades Store"/>
+    <packagedElement xmi:type="uml:Node" xmi:id="_syR90lxpEfCGJZ-C3lgMBA" name="Consent Store"/>
+    <packagedElement xmi:type="uml:Node" xmi:id="_syR901xpEfCGJZ-C3lgMBA" name="Logs Store">
+      <ownedComment xmi:id="_syR91FxpEfCGJZ-C3lgMBA">
+        <body>&lt;Enter note text here></body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_syR91VxpEfCGJZ-C3lgMBA" name="Credentials" informationSource="_syR9xFxpEfCGJZ-C3lgMBA" informationTarget="_syR9x1xpEfCGJZ-C3lgMBA">
+      <ownedComment xmi:id="_syR91lxpEfCGJZ-C3lgMBA">
+        <body>&lt;Enter note text here></body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_syR911xpEfCGJZ-C3lgMBA" name="Token Validation" informationSource="_syR9xlxpEfCGJZ-C3lgMBA" informationTarget="_syR9x1xpEfCGJZ-C3lgMBA"/>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_syR92FxpEfCGJZ-C3lgMBA" name="Profile Read/Write" informationSource="_syR9x1xpEfCGJZ-C3lgMBA" informationTarget="_syR9yFxpEfCGJZ-C3lgMBA">
+      <ownedComment xmi:id="_syR92VxpEfCGJZ-C3lgMBA">
+        <body>&lt;Enter note text here></body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_syR92lxpEfCGJZ-C3lgMBA" name="Consent Change" informationSource="_syR9yFxpEfCGJZ-C3lgMBA" informationTarget="_syR9yVxpEfCGJZ-C3lgMBA">
+      <ownedComment xmi:id="_syR921xpEfCGJZ-C3lgMBA">
+        <body>&lt;Enter note text here></body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_syR93FxpEfCGJZ-C3lgMBA" name="Audit Event" informationSource="_syR9x1xpEfCGJZ-C3lgMBA" informationTarget="_syR9zFxpEfCGJZ-C3lgMBA"/>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_syR93VxpEfCGJZ-C3lgMBA" name="Record CRUD" informationSource="_syR9yVxpEfCGJZ-C3lgMBA" informationTarget="_syR9z1xpEfCGJZ-C3lgMBA">
+      <ownedComment xmi:id="_syR93lxpEfCGJZ-C3lgMBA">
+        <body>&lt;Enter note text here></body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_syR931xpEfCGJZ-C3lgMBA" name="Grade Submission" informationSource="_syR9y1xpEfCGJZ-C3lgMBA" informationTarget="_syR90VxpEfCGJZ-C3lgMBA">
+      <ownedComment xmi:id="_syR94FxpEfCGJZ-C3lgMBA">
+        <body>&lt;Enter note text here></body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_syR94VxpEfCGJZ-C3lgMBA" name="Consent Write/Read" informationSource="_syR9yFxpEfCGJZ-C3lgMBA" informationTarget="_syR90lxpEfCGJZ-C3lgMBA">
+      <ownedComment xmi:id="_syR94lxpEfCGJZ-C3lgMBA">
+        <body>&lt;Enter note text here></body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_syR941xpEfCGJZ-C3lgMBA" name="Log Write" informationSource="_syR9zFxpEfCGJZ-C3lgMBA" informationTarget="_syR901xpEfCGJZ-C3lgMBA"/>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_syR95FxpEfCGJZ-C3lgMBA" name="Profile Read/Write" informationSource="_syR9x1xpEfCGJZ-C3lgMBA" informationTarget="_syR9zVxpEfCGJZ-C3lgMBA">
+      <ownedComment xmi:id="_syR95VxpEfCGJZ-C3lgMBA">
+        <body>&lt;Enter note text here></body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_syR95lxpEfCGJZ-C3lgMBA" name="Audit Event" informationSource="_syR9y1xpEfCGJZ-C3lgMBA" informationTarget="_syR9zFxpEfCGJZ-C3lgMBA">
+      <ownedComment xmi:id="_syR951xpEfCGJZ-C3lgMBA">
+        <body>&lt;Enter note text here></body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_syR96FxpEfCGJZ-C3lgMBA" name="Consent Change" informationSource="_syR9xFxpEfCGJZ-C3lgMBA" informationTarget="_syR9yFxpEfCGJZ-C3lgMBA"/>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_syR96VxpEfCGJZ-C3lgMBA" name="Consent Change" informationSource="_syR9xVxpEfCGJZ-C3lgMBA" informationTarget="_syR9yFxpEfCGJZ-C3lgMBA"/>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_syR96lxpEfCGJZ-C3lgMBA" name="Audit Event" informationSource="_syR9x1xpEfCGJZ-C3lgMBA" informationTarget="_syR9zFxpEfCGJZ-C3lgMBA">
+      <ownedComment xmi:id="_syR961xpEfCGJZ-C3lgMBA">
+        <body>&lt;Enter note text here></body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_syR97FxpEfCGJZ-C3lgMBA" name="Audit Event" informationSource="_syR9y1xpEfCGJZ-C3lgMBA" informationTarget="_syR9zFxpEfCGJZ-C3lgMBA"/>
+    <packagedElement xmi:type="uml:InformationFlow" xmi:id="_syR97VxpEfCGJZ-C3lgMBA" name="Audit Event" informationSource="_syR9yFxpEfCGJZ-C3lgMBA" informationTarget="_syR9zFxpEfCGJZ-C3lgMBA">
+      <ownedComment xmi:id="_syR97lxpEfCGJZ-C3lgMBA">
+        <body>&lt;Enter note text here></body>
+      </ownedComment>
+    </packagedElement>
+    <profileApplication xmi:id="_szUfkFxpEfCGJZ-C3lgMBA">
+      <eAnnotations xmi:id="_szeQkFxpEfCGJZ-C3lgMBA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="LocalProfile.profile.xmi#_syk4uFxpEfCGJZ-C3lgMBA"/>
+      </eAnnotations>
+      <appliedProfile href="LocalProfile.profile.xmi#_syk4sVxpEfCGJZ-C3lgMBA"/>
+    </profileApplication>
+  </uml:Model>
+  <LocalProfile:DataFlow xmi:id="_szeQkVxpEfCGJZ-C3lgMBA" base_InformationFlow="_syR9ylxpEfCGJZ-C3lgMBA" dataType="audit_event" isEncrypted="true" protocol="HTTPS"/>
+  <LocalProfile:DataStore xmi:id="_szeQklxpEfCGJZ-C3lgMBA" base_Node="_syR9zVxpEfCGJZ-C3lgMBA" dataType="personal_data" isEncrypted="true" retention="365d"/>
+  <LocalProfile:DataStore xmi:id="_szeQk1xpEfCGJZ-C3lgMBA" base_Node="_syR9z1xpEfCGJZ-C3lgMBA" dataType="personal_data" isEncrypted="false" retention="n/a"/>
+  <LocalProfile:DataStore xmi:id="_szeQlFxpEfCGJZ-C3lgMBA" base_Node="_syR90VxpEfCGJZ-C3lgMBA" dataType="student_record" isEncrypted="true" retention="365d"/>
+  <LocalProfile:DataStore xmi:id="_szeQlVxpEfCGJZ-C3lgMBA" base_Node="_syR90lxpEfCGJZ-C3lgMBA" dataType="consent_record" isEncrypted="false" retention="n/a"/>
+  <LocalProfile:DataStore xmi:id="_szeQllxpEfCGJZ-C3lgMBA" base_Node="_syR901xpEfCGJZ-C3lgMBA" dataType="audit_event" isEncrypted="false" retention="365d"/>
+  <LocalProfile:DataFlow xmi:id="_szeQl1xpEfCGJZ-C3lgMBA" base_InformationFlow="_syR91VxpEfCGJZ-C3lgMBA" dataType="personal_data" isEncrypted="true" protocol="HTTPS" Purpose="credentials"/>
+  <LocalProfile:DataFlow xmi:id="_szeQmFxpEfCGJZ-C3lgMBA" base_InformationFlow="_syR911xpEfCGJZ-C3lgMBA" dataType="personal_data" isEncrypted="true" protocol="HTTPS" Purpose="validate-token"/>
+  <LocalProfile:DataFlow xmi:id="_sznagFxpEfCGJZ-C3lgMBA" base_InformationFlow="_syR92FxpEfCGJZ-C3lgMBA" dataType="consent_record" isEncrypted="true" protocol="HTTPS"/>
+  <LocalProfile:DataFlow xmi:id="_sznagVxpEfCGJZ-C3lgMBA" base_InformationFlow="_syR92lxpEfCGJZ-C3lgMBA" dataType="consent_record " isEncrypted="false" protocol="HTTPS" Purpose="consent-management"/>
+  <LocalProfile:DataFlow xmi:id="_sznaglxpEfCGJZ-C3lgMBA" base_InformationFlow="_syR93FxpEfCGJZ-C3lgMBA" dataType="audit_event" isEncrypted="false" protocol="HTTPS" Purpose="authentication"/>
+  <LocalProfile:DataFlow xmi:id="_sznag1xpEfCGJZ-C3lgMBA" base_InformationFlow="_syR93VxpEfCGJZ-C3lgMBA" dataType="consent_record" isEncrypted="true" protocol="HTTPS" Purpose="record"/>
+  <LocalProfile:DataFlow xmi:id="_sznahFxpEfCGJZ-C3lgMBA" base_InformationFlow="_syR931xpEfCGJZ-C3lgMBA" dataType="personal_data" isEncrypted="true" protocol="HTTPS" Purpose="submit-grade"/>
+  <LocalProfile:DataFlow xmi:id="_sznahVxpEfCGJZ-C3lgMBA" base_InformationFlow="_syR94VxpEfCGJZ-C3lgMBA" dataType="consent_record" isEncrypted="false" protocol="HTTPS" Purpose="consent-management"/>
+  <LocalProfile:DataFlow xmi:id="_sznahlxpEfCGJZ-C3lgMBA" base_InformationFlow="_syR941xpEfCGJZ-C3lgMBA" dataType="audit_event" isEncrypted="true" protocol="DBConnection" Purpose="log-write"/>
+  <LocalProfile:DataFlow xmi:id="_sznah1xpEfCGJZ-C3lgMBA" base_InformationFlow="_syR95FxpEfCGJZ-C3lgMBA" dataType="personal_data" isEncrypted="true" protocol="DBConnection" Purpose="read-write-profile"/>
+  <LocalProfile:DataFlow xmi:id="_sznaiFxpEfCGJZ-C3lgMBA" base_InformationFlow="_syR95lxpEfCGJZ-C3lgMBA" dataType="audit_event" isEncrypted="false" protocol="HTTPS" Purpose="authentication"/>
+  <LocalProfile:DataFlow xmi:id="_sznaiVxpEfCGJZ-C3lgMBA" base_InformationFlow="_syR96FxpEfCGJZ-C3lgMBA" dataType="personal_data" isEncrypted="true" protocol="HTTPS" Purpose="consent-management"/>
+  <LocalProfile:DataFlow xmi:id="_sznailxpEfCGJZ-C3lgMBA" base_InformationFlow="_syR96VxpEfCGJZ-C3lgMBA" dataType="personal_data" isEncrypted="true" protocol="HTTPS" Purpose="consent-management"/>
+  <LocalProfile:DataFlow xmi:id="_sznai1xpEfCGJZ-C3lgMBA" base_InformationFlow="_syR96lxpEfCGJZ-C3lgMBA" dataType="audit_event" isEncrypted="true" protocol="HTTPS" Purpose="authentication"/>
+  <LocalProfile:DataFlow xmi:id="_sznajFxpEfCGJZ-C3lgMBA" base_InformationFlow="_syR97VxpEfCGJZ-C3lgMBA" dataType="consent_record" isEncrypted="true" protocol="HTTPS" Purpose="consent-management"/>
+</xmi:XMI>

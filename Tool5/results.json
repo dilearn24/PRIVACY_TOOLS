@@ -1,0 +1,51 @@
+[
+  {
+    "rule": "ERROR INTERNAL SERVER",
+    "description": "Internal Server Error in application",
+    "recommendation": "Catch and handle errors gracefully; log only a high-level error message without stack details.",
+    "line": 2,
+    "value": "Internal Server Error: /login"
+  },
+  {
+    "rule": "ERROR TRACEBACK",
+    "description": "Python stack trace present",
+    "recommendation": "In production, catch exceptions and log only summary; send full trace to a secure error-tracker.",
+    "line": 3,
+    "value": "Traceback (most recent call last):"
+  },
+  {
+    "rule": "ERROR RUNTIME",
+    "description": "RuntimeError in logs",
+    "recommendation": "Handle runtime errors in code and log only sanitized messages without sensitive context.",
+    "line": 12,
+    "value": "RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings."
+  },
+  {
+    "rule": "ERROR INTERNAL SERVER",
+    "description": "Internal Server Error in application",
+    "recommendation": "Catch and handle errors gracefully; log only a high-level error message without stack details.",
+    "line": 14,
+    "value": "Internal Server Error: /login"
+  },
+  {
+    "rule": "ERROR TRACEBACK",
+    "description": "Python stack trace present",
+    "recommendation": "In production, catch exceptions and log only summary; send full trace to a secure error-tracker.",
+    "line": 15,
+    "value": "Traceback (most recent call last):"
+  },
+  {
+    "rule": "ERROR RUNTIME",
+    "description": "RuntimeError in logs",
+    "recommendation": "Handle runtime errors in code and log only sanitized messages without sensitive context.",
+    "line": 24,
+    "value": "RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings."
+  },
+  {
+    "rule": "PRIVACY COOKIE",
+    "description": "Cookie operation in logs",
+    "recommendation": "Do not log full cookie values; log only the cookie name or an anonymized marker.",
+    "line": 90,
+    "value": "Setting cookie successful"
+  }
+]

@@ -1,0 +1,11 @@
+[
+{
+    "id": "REQUIRE FLOW PURPOSE",
+    "target": "flow",
+    "description": "Every InformationFlow must declare a non-empty business purpose",
+    "condition": {
+        "Purpose": ".+"
+    }
+}
+]
+  

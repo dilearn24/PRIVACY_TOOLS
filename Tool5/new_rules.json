@@ -1,0 +1,23 @@
+[
+  {
+    "id": "ENDPOINT LOGIN",
+    "description": "User login endpoint accessed",
+    "field": "log",
+    "pattern": "\"(?:GET|POST)\\s+/(?:auth_lab/)?login\\b",
+    "recommendation": "Log only user ID and timestamp on login; avoid logging raw credentials or headers."
+  },
+  {
+    "id": "ENDPOINT SIGNUP",
+    "description": "User signup endpoint accessed",
+    "field": "log",
+    "pattern": "\"POST\\s+/(?:auth_lab/)?signup\\b",
+    "recommendation": "Log only essential signup metadata (user ID/email, status); do not log passwords."
+  },
+  {
+    "id": "ENDPOINT DATA EXPORT",
+    "description": "Data export endpoint accessed",
+    "field": "log",
+    "pattern": "\"GET\\s+/data_exp\\b",
+    "recommendation": "Record only the fact of export (user ID, time, success/failure); never log the payload."
+  }
+]

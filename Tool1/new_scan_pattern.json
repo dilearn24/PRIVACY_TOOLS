@@ -1,0 +1,74 @@
+[
+    {
+      "pattern": "\\b(patient_name|first_name|last_name|full_name)\\b",
+      "description": "PHI: patient name"
+    },
+    {
+      "pattern": "\\b(patient_id|mrn|medical_record_number|record_number)\\b",
+      "description": "PHI: medical record number"
+    },
+    {
+      "pattern": "\\b(ssn|social_security_number)\\b",
+      "description": "PHI: Social Security Number"
+    },
+    {
+      "pattern": "\\b(dob|date_of_birth|admission_date|discharge_date|treatment_date|visit_date|date_of_death)\\b",
+      "description": "PHI: dates related to individual"
+    },
+    {
+      "pattern": "\\b(phone|telephone|fax)\\b",
+      "description": "PHI: phone or fax number"
+    },
+    {
+      "pattern": "\\b(email|email_address)\\b",
+      "description": "PHI: email address"
+    },
+    {
+      "pattern": "\\b(address|street|city|county|zip|postcode|state)\\b",
+      "description": "PHI: geographic subdivisions"
+    },
+    {
+      "pattern": "\\b(health_plan_id|plan_id|member_id|beneficiary_number|policy_number)\\b",
+      "description": "PHI: health plan beneficiary number"
+    },
+    {
+      "pattern": "\\b(account_number|account_no|acct_no)\\b",
+      "description": "PHI: account number"
+    },
+    {
+      "pattern": "\\b(certificate_number|license_number|provider_npi)\\b",
+      "description": "PHI: certificate/license number or provider NPI"
+    },
+    {
+      "pattern": "\\b(vehicle_id|license_plate|vin)\\b",
+      "description": "PHI: vehicle identifiers"
+    },
+    {
+      "pattern": "\\b(device_id|device_identifier|medical_device_id)\\b",
+      "description": "PHI: device identifiers"
+    },
+    {
+      "pattern": "\\b(icd10_code|icd9_code|dx_code|diagnosis_code)\\b",
+      "description": "PHI: diagnosis codes (ICD)"
+    },
+    {
+      "pattern": "\\b(cpt_code|procedure_code)\\b",
+      "description": "PHI: procedure or treatment codes (CPT)"
+    },
+    {
+      "pattern": "\\b(url|uri|http|https)\\b",
+      "description": "PHI: web URLs"
+    },
+    {
+      "pattern": "\\b(ip_address|ipv4|ipv6|mac_address)\\b",
+      "description": "PHI: IP or MAC addresses"
+    },
+    {
+      "pattern": "\\b(biometric|fingerprint|retina_scan|voice_print)\\b",
+      "description": "PHI: biometric identifiers"
+    },
+    {
+      "pattern": "\\b(photo|image)\\b",
+      "description": "PHI: full‐face photos or comparable images"
+    }
+  ]

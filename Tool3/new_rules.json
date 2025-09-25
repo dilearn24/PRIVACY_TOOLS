@@ -1,0 +1,42 @@
+[
+    {
+      "id": "CONSENT_FLOW_SECURE",
+      "target": "flow",
+      "condition": {
+        "data_type": "consent_record",
+        "encrypted": "true"
+      }
+    },
+    {
+      "id": "TIMESTAMP_ON_CONSENT",
+      "target": "flow",
+      "condition": {
+        "data_type": "consent_record",
+        "timestamp": "exists"
+      }
+    },
+    {
+      "id": "RBAC_ON_GRADE_FLOW",
+      "target": "flow",
+      "condition": {
+        "data_type": "academic_data",
+        "rbac": "true"
+      }
+    },
+    {
+      "id": "AUDIT_LOG_SIGNED",
+      "target": "store",
+      "condition": {
+        "isALog": "true",
+        "signed": "true"
+      }
+    },
+    {
+      "id": "AUDIT_LOG_RETENTION",
+      "target": "store",
+      "condition": {
+        "isALog": "true",
+        "retention_policy": "exists"
+      }
+    }
+  ]  
