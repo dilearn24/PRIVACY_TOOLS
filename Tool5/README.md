@@ -97,3 +97,10 @@ https://cheatsheetseries.owasp.org/cheatsheets/Cookie_Theft_Mitigation_Cheat_She
 https://cheatsheetseries.owasp.org/cheatsheets/Error_Handling_Cheat_Sheet.html
 17.	"Privacy Framework," NIST, Available:
 https://www.nist.gov/privacy-framework
+
+
+## License
+
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.  
+
+© 2025 Dinh Bui. All rights reserved.

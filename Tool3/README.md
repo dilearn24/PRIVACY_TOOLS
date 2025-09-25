@@ -95,3 +95,9 @@ https://www.itgovernance.eu/blog/en/the-gdpr-understanding-the-6-data-protection
 https://csf.tools/reference/nist-sp-800-53/r5/ac/ac-3/
 18.	"AU-3: Content of Audit Records," NIST SP 800-53, Available:
 https://csf.tools/reference/nist-sp-800-53/r4/au/au-3/
+
+## License
+
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.  
+
+© 2025 Dinh Bui. All rights reserved.

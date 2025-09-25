@@ -90,3 +90,10 @@ https://gdpr-info.eu/art-5-gdpr/
 https://commission.europa.eu/law/law-topic/data-protection/rules-business-and-organisations/principles-gdpr/how-long-can-data-be-kept-and-it-necessary-update-it_en
 15.	"GDPR Article 5: Key Principles and Compliance Best Practices," Exabeam, Available:
 https://www.exabeam.com/explainers/gdpr-compliance/gdpr-article-5-key-principles-and-6-compliance-best-practices
+
+
+## License
+
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.  
+
+© 2025 Dinh Bui. All rights reserved.

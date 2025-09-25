@@ -91,3 +91,9 @@ python3 privacy_testing_validator.py --update-rules extra_rules.json rules.json
 8. "PyGoat Project," GitHub, Available: [https://github.com/adeyosemanputra/pygoat](https://github.com/adeyosemanputra/pygoat)
 9. "Docker Run Reference," Docker Documentation, Available: [https://docs.docker.com/reference/cli/docker/container/run/](https://docs.docker.com/reference/cli/docker/container/run/)
 10. "Docker Build Reference," Docker Documentation, Available: [https://docs.docker.com/build/](https://docs.docker.com/build/)
+
+## License
+
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.  
+
+© 2025 Dinh Bui. All rights reserved.

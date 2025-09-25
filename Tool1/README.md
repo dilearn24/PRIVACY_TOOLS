@@ -87,3 +87,9 @@ Default patterns cover GDPR and CCPA categories. To add or override the default 
 6. Atlassian, “Continuous integration vs. delivery vs. deployment | Atlassian,” Atlassian. Available: [https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment](https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment)
 7. “Privacy is an afterthought in the software lifecycle. That needs to change. - Stack Overflow,” Jul. 19, 2021. Available: [https://stackoverflow.blog/2021/07/19/privacy-is-an-afterthought-in-the-software-lifecycle-that-needs-to-change/](https://stackoverflow.blog/2021/07/19/privacy-is-an-afterthought-in-the-software-lifecycle-that-needs-to-change/)
 8. M. Tahaei, K. Vaniea, and A. Rashid, “Embedding privacy into design through software developers: Challenges and solutions,” IEEE Security & Privacy, vol. 21, no. 1, pp. 49–57, Sep. 2022. Available: [https://doi.org/10.1109/msec.2022.3204364](https://doi.org/10.1109/msec.2022.3204364)
+
+## License
+
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.  
+
+© 2025 Dinh Bui. All rights reserved.
